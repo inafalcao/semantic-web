@@ -1,11 +1,18 @@
 <rdf:RDF
       xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
       xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+      xmlns:aiiso="http://purl.org/vocab/aiiso/schema#"
       xmlns:foaf="http://xmlns.com/foaf/0.1/"
       xmlns:admin="http://webns.net/mvcb/">
 
      <foaf:Group>
-        <foaf:name>Semantic Web</foaf:name>
+        <foaf:name>TOPICOS AVANCADOS EM BANCO DE DADOS I</foaf:name>
+
+        <aiiso:description>Disciplina de estudos em Web Semântica</aiiso:description>
+        <aiiso:Institution>UFC</aiiso:Institution>
+        <aiiso:Department>Departamento de Computação</aiiso:Department>
+        <aiiso:Course>Computação</aiiso:Course>
+        <aiiso:code>CK0144</aiiso:code>
 
         <foaf:member>
           <foaf:Person>
