@@ -1,0 +1,20 @@
+<rdf:RDF
+      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+      xmlns:foaf="http://xmlns.com/foaf/0.1/"
+      xmlns:admin="http://webns.net/mvcb/">
+    <foaf:PersonalProfileDocument rdf:about="">
+      <foaf:maker rdf:resource="#me"/>
+      <foaf:primaryTopic rdf:resource="#me"/>
+    </foaf:PersonalProfileDocument>
+    <foaf:Person rdf:ID="me">
+        <foaf:name>Inaciane Monteiro</foaf:name>
+        <foaf:title>Mrs</foaf:title>
+        <foaf:givenname>Inaciane</foaf:givenname>
+        <foaf:family_name>Monteiro</foaf:family_name>
+        <foaf:nick>ina</foaf:nick>
+        <foaf:homepage rdf:resource="https://plus.google.com/103485828107965619700"/>
+        <foaf:depiction rdf:resource="https://lh5.googleusercontent.com/-c_OBlYe6WRk/UOZuw0J-qnI/AAAAAAAAAcg/sfHbact1qAEjJXcMuyQIHlR49iU4VE9dQCL0B/s320-no/0853a216-4a69-4606-8994-31114933bd7f"/>
+        <foaf:phone rdf:resource="tel:5585996778442"/>
+    </foaf:Person>
+</rdf:RDF>
