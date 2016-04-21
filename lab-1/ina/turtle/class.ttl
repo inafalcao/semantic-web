@@ -1,56 +1,32 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<response>
-<extractors>
-<extractor>rdf-xml</extractor>
-</extractors>
-<report>
-<message/>
-<error/>
-<issueReport>
-</issueReport>
-<validationReport>
-<issues>
-</issues>
-<ruleActivations>
-</ruleActivations>
-<errors>
-</errors>
-</validationReport>
-</report>
-<data>
-<![CDATA[
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix aiiso: <http://purl.org/vocab/aiiso/schema#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix admin: <http://webns.net/mvcb/> .
 
-_:node1adbrg7a1x31457 a foaf:Group ;
+_:node1adbrg7a1x31828 a foaf:Group ;
     foaf:name "TOPICOS AVANCADOS EM BANCO DE DADOS I" ;
     aiiso:description "Disciplina de estudos em Web SemÃ¢ntica" ;
     aiiso:Institution "UFC" ;
     aiiso:Department "Departamento de ComputaÃ§Ã£o" ;
     aiiso:Course "ComputaÃ§Ã£o" ;
     aiiso:code "CK0144" ;
-    foaf:member _:node1adbrg7a1x31458 .
+    foaf:member _:node1adbrg7a1x31829 .
 
-_:node1adbrg7a1x31458 a foaf:Person ;
+_:node1adbrg7a1x31829 a foaf:Person ;
     foaf:name "Vania Vidal" .
 
-_:node1adbrg7a1x31457 foaf:member _:node1adbrg7a1x31459 .
+_:node1adbrg7a1x31828 foaf:member _:node1adbrg7a1x31830 .
 
-_:node1adbrg7a1x31459 a foaf:Person ;
+_:node1adbrg7a1x31830 a foaf:Person ;
     foaf:name "Inaciane Monteiro" .
 
-_:node1adbrg7a1x31457 foaf:member _:node1adbrg7a1x31460 .
+_:node1adbrg7a1x31828 foaf:member _:node1adbrg7a1x31831 .
 
-_:node1adbrg7a1x31460 a foaf:Person ;
+_:node1adbrg7a1x31831 a foaf:Person ;
     foaf:name "Caio Viktor" .
 
-_:node1adbrg7a1x31457 foaf:member _:node1adbrg7a1x31461 .
+_:node1adbrg7a1x31828 foaf:member _:node1adbrg7a1x31832 .
 
-_:node1adbrg7a1x31461 a foaf:Person ;
+_:node1adbrg7a1x31832 a foaf:Person ;
     foaf:name "Narciso Arruda" .
-]]>
-</data>
-</response>
