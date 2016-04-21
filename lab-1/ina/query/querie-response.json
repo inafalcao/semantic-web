@@ -1,0 +1,134 @@
+{
+  "head": {
+    "vars": [ "subject" , "predicate" , "object" ]
+  } ,
+  "results": {
+    "bindings": [
+      {
+        "subject": { "type": "bnode" , "value": "b0" } ,
+        "predicate": { "type": "uri" , "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" } ,
+        "object": { "type": "uri" , "value": "http://xmlns.com/foaf/0.1/Person" }
+      } ,
+      {
+        "subject": { "type": "bnode" , "value": "b0" } ,
+        "predicate": { "type": "uri" , "value": "http://xmlns.com/foaf/0.1/name" } ,
+        "object": { "type": "literal" , "value": "Inaciane Monteiro" }
+      } ,
+      {
+        "subject": { "type": "uri" , "value": "http://ufc.br.web-semantics/preferences.rdf#favorite_food" } ,
+        "predicate": { "type": "uri" , "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" } ,
+        "object": { "type": "uri" , "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" }
+      } ,
+      {
+        "subject": { "type": "uri" , "value": "http://ufc.br.web-semantics/preferences.rdf#favorite_food" } ,
+        "predicate": { "type": "uri" , "value": "http://www.w3.org/2000/01/rdf-schema#domain" } ,
+        "object": { "type": "uri" , "value": "http://ufc.br.web-semantics/preferences.rdf#Person" }
+      } ,
+      {
+        "subject": { "type": "bnode" , "value": "b1" } ,
+        "predicate": { "type": "uri" , "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" } ,
+        "object": { "type": "uri" , "value": "http://xmlns.com/foaf/0.1/Person" }
+      } ,
+      {
+        "subject": { "type": "bnode" , "value": "b1" } ,
+        "predicate": { "type": "uri" , "value": "http://xmlns.com/foaf/0.1/name" } ,
+        "object": { "type": "literal" , "value": "Narciso Arruda" }
+      } ,
+      {
+        "subject": { "type": "uri" , "value": "http://ufc.br.web-semantics/preferences.rdf#me" } ,
+        "predicate": { "type": "uri" , "value": "http://ufc.br.web-semantics/preferences.rdffavorite_film" } ,
+        "object": { "type": "literal" , "value": "Mononoke Hime" }
+      } ,
+      {
+        "subject": { "type": "uri" , "value": "http://ufc.br.web-semantics/preferences.rdf#me" } ,
+        "predicate": { "type": "uri" , "value": "http://xmlns.com/foaf/0.1/name" } ,
+        "object": { "type": "literal" , "value": "Inaciane Monteiro" }
+      } ,
+      {
+        "subject": { "type": "uri" , "value": "http://ufc.br.web-semantics/preferences.rdf#me" } ,
+        "predicate": { "type": "uri" , "value": "http://xmlns.com/foaf/0.1/nick" } ,
+        "object": { "type": "literal" , "value": "ina" }
+      } ,
+      {
+        "subject": { "type": "uri" , "value": "http://ufc.br.web-semantics/preferences.rdf#me" } ,
+        "predicate": { "type": "uri" , "value": "http://xmlns.com/foaf/0.1/title" } ,
+        "object": { "type": "literal" , "value": "Mrs" }
+      } ,
+      {
+        "subject": { "type": "uri" , "value": "http://ufc.br.web-semantics/preferences.rdf#me" } ,
+        "predicate": { "type": "uri" , "value": "http://xmlns.com/foaf/0.1/homepage" } ,
+        "object": { "type": "uri" , "value": "https://plus.google.com/103485828107965619700" }
+      } ,
+      {
+        "subject": { "type": "uri" , "value": "http://ufc.br.web-semantics/preferences.rdf#me" } ,
+        "predicate": { "type": "uri" , "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" } ,
+        "object": { "type": "uri" , "value": "http://xmlns.com/foaf/0.1/Person" }
+      } ,
+      {
+        "subject": { "type": "uri" , "value": "http://ufc.br.web-semantics/preferences.rdf#me" } ,
+        "predicate": { "type": "uri" , "value": "http://xmlns.com/foaf/0.1/givenname" } ,
+        "object": { "type": "literal" , "value": "Inaciane" }
+      } ,
+      {
+        "subject": { "type": "uri" , "value": "http://ufc.br.web-semantics/preferences.rdf#me" } ,
+        "predicate": { "type": "uri" , "value": "http://xmlns.com/foaf/0.1/family_name" } ,
+        "object": { "type": "literal" , "value": "Monteiro" }
+      } ,
+      {
+        "subject": { "type": "uri" , "value": "http://ufc.br.web-semantics/preferences.rdf#me" } ,
+        "predicate": { "type": "uri" , "value": "http://xmlns.com/foaf/0.1/depiction" } ,
+        "object": { "type": "uri" , "value": "https://lh5.googleusercontent.com/-c_OBlYe6WRk/UOZuw0J-qnI/AAAAAAAAAcg/sfHbact1qAEjJXcMuyQIHlR49iU4VE9dQCL0B/s320-no/0853a216-4a69-4606-8994-31114933bd7f" }
+      } ,
+      {
+        "subject": { "type": "uri" , "value": "http://ufc.br.web-semantics/preferences.rdf#me" } ,
+        "predicate": { "type": "uri" , "value": "http://ufc.br.web-semantics/preferences.rdffavorite_food" } ,
+        "object": { "type": "literal" , "value": "Sushi" }
+      } ,
+      {
+        "subject": { "type": "uri" , "value": "http://ufc.br.web-semantics/preferences.rdf#me" } ,
+        "predicate": { "type": "uri" , "value": "http://xmlns.com/foaf/0.1/phone" } ,
+        "object": { "type": "uri" , "value": "tel:5585996778442" }
+      } ,
+      {
+        "subject": { "type": "bnode" , "value": "b2" } ,
+        "predicate": { "type": "uri" , "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" } ,
+        "object": { "type": "uri" , "value": "http://xmlns.com/foaf/0.1/Person" }
+      } ,
+      {
+        "subject": { "type": "bnode" , "value": "b2" } ,
+        "predicate": { "type": "uri" , "value": "http://xmlns.com/foaf/0.1/name" } ,
+        "object": { "type": "literal" , "value": "Vania Vidal" }
+      } ,
+      {
+        "subject": { "type": "uri" , "value": "http://ufc.br.web-semantics/preferences.rdf#favorite_film" } ,
+        "predicate": { "type": "uri" , "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" } ,
+        "object": { "type": "uri" , "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" }
+      } ,
+      {
+        "subject": { "type": "uri" , "value": "http://ufc.br.web-semantics/preferences.rdf#favorite_film" } ,
+        "predicate": { "type": "uri" , "value": "http://www.w3.org/2000/01/rdf-schema#domain" } ,
+        "object": { "type": "uri" , "value": "http://ufc.br.web-semantics/preferences.rdf#Person" }
+      } ,
+      {
+        "subject": { "type": "bnode" , "value": "b3" } ,
+        "predicate": { "type": "uri" , "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" } ,
+        "object": { "type": "uri" , "value": "http://xmlns.com/foaf/0.1/Person" }
+      } ,
+      {
+        "subject": { "type": "bnode" , "value": "b3" } ,
+        "predicate": { "type": "uri" , "value": "http://xmlns.com/foaf/0.1/name" } ,
+        "object": { "type": "literal" , "value": "Caio Viktor" }
+      } ,
+      {
+        "subject": { "type": "bnode" , "value": "b4" } ,
+        "predicate": { "type": "uri" , "value": "http://xmlns.com/foaf/0.1/member" } ,
+        "object": { "type": "bnode" , "value": "b0" }
+      } ,
+      {
+        "subject": { "type": "bnode" , "value": "b4" } ,
+        "predicate": { "type": "uri" , "value": "http://xmlns.com/foaf/0.1/member" } ,
+        "object": { "type": "bnode" , "value": "b3" }
+      }
+    ]
+  }
+}
