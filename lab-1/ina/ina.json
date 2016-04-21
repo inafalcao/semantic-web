@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<response>
+<extractors>
+<extractor>rdf-xml</extractor>
+</extractors>
+<report>
+<message/>
+<error/>
+<issueReport>
+<extractorIssues extractor="rdf-xml">
+<issue level="Warning" row="30" col="33">unknown rdf element <rdf:favorite_food></issue>
+<issue level="Warning" row="31" col="36">unknown rdf element <rdf:favorite_film></issue>
+</extractorIssues>
+</issueReport>
+<validationReport>
+<issues>
+</issues>
+<ruleActivations>
+</ruleActivations>
+<errors>
+</errors>
+</validationReport>
+</report>
+<data>
+<![CDATA[
+{ "quads" : [[{ "type" : "uri", "value" : "http://any23.org/tmp/#favorite_film"}, "http://www.w3.org/1999/02/22-rdf-syntax-ns#type", { "type" : "uri", "value" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"}, null], [{ "type" : "uri", "value" : "http://any23.org/tmp/#favorite_film"}, "http://www.w3.org/2000/01/rdf-schema#domain", { "type" : "uri", "value" : "http://any23.org/tmp/#Person"}, null], [{ "type" : "uri", "value" : "http://any23.org/tmp/#favorite_food"}, "http://www.w3.org/1999/02/22-rdf-syntax-ns#type", { "type" : "uri", "value" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"}, null], [{ "type" : "uri", "value" : "http://any23.org/tmp/#favorite_food"}, "http://www.w3.org/2000/01/rdf-schema#domain", { "type" : "uri", "value" : "http://any23.org/tmp/#Person"}, null], [{ "type" : "uri", "value" : "http://any23.org/tmp/"}, "http://www.w3.org/1999/02/22-rdf-syntax-ns#type", { "type" : "uri", "value" : "http://xmlns.com/foaf/0.1/PersonalProfileDocument"}, null], [{ "type" : "uri", "value" : "http://any23.org/tmp/"}, "http://xmlns.com/foaf/0.1/maker", { "type" : "uri", "value" : "http://any23.org/tmp/#me"}, null], [{ "type" : "uri", "value" : "http://any23.org/tmp/"}, "http://xmlns.com/foaf/0.1/primaryTopic", { "type" : "uri", "value" : "http://any23.org/tmp/#me"}, null], [{ "type" : "uri", "value" : "http://any23.org/tmp/#me"}, "http://www.w3.org/1999/02/22-rdf-syntax-ns#type", { "type" : "uri", "value" : "http://xmlns.com/foaf/0.1/Person"}, null], [{ "type" : "uri", "value" : "http://any23.org/tmp/#me"}, "http://xmlns.com/foaf/0.1/name", {"type" : "literal", "value" : "Inaciane Monteiro", "lang" : null, "datatype" : null}, null], [{ "type" : "uri", "value" : "http://any23.org/tmp/#me"}, "http://xmlns.com/foaf/0.1/title", {"type" : "literal", "value" : "Mrs", "lang" : null, "datatype" : null}, null], [{ "type" : "uri", "value" : "http://any23.org/tmp/#me"}, "http://xmlns.com/foaf/0.1/givenname", {"type" : "literal", "value" : "Inaciane", "lang" : null, "datatype" : null}, null], [{ "type" : "uri", "value" : "http://any23.org/tmp/#me"}, "http://xmlns.com/foaf/0.1/family_name", {"type" : "literal", "value" : "Monteiro", "lang" : null, "datatype" : null}, null], [{ "type" : "uri", "value" : "http://any23.org/tmp/#me"}, "http://xmlns.com/foaf/0.1/nick", {"type" : "literal", "value" : "ina", "lang" : null, "datatype" : null}, null], [{ "type" : "uri", "value" : "http://any23.org/tmp/#me"}, "http://xmlns.com/foaf/0.1/homepage", { "type" : "uri", "value" : "https://plus.google.com/103485828107965619700"}, null], [{ "type" : "uri", "value" : "http://any23.org/tmp/#me"}, "http://xmlns.com/foaf/0.1/depiction", { "type" : "uri", "value" : "https://lh5.googleusercontent.com/-c_OBlYe6WRk/UOZuw0J-qnI/AAAAAAAAAcg/sfHbact1qAEjJXcMuyQIHlR49iU4VE9dQCL0B/s320-no/0853a216-4a69-4606-8994-31114933bd7f"}, null], [{ "type" : "uri", "value" : "http://any23.org/tmp/#me"}, "http://xmlns.com/foaf/0.1/phone", { "type" : "uri", "value" : "tel:5585996778442"}, null], [{ "type" : "uri", "value" : "http://any23.org/tmp/#me"}, "http://www.w3.org/1999/02/22-rdf-syntax-ns#favorite_food", {"type" : "literal", "value" : "Sushi", "lang" : null, "datatype" : null}, null], [{ "type" : "uri", "value" : "http://any23.org/tmp/#me"}, "http://www.w3.org/1999/02/22-rdf-syntax-ns#favorite_film", {"type" : "literal", "value" : "Mononoke", "lang" : null, "datatype" : null}, null]]}]]>
+</data>
+</response>
