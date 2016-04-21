@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<response>
+<extractors>
+<extractor>rdf-xml</extractor>
+</extractors>
+<report>
+<message/>
+<error/>
+<issueReport>
+<extractorIssues extractor="rdf-xml">
+<issue level="Warning" row="30" col="33">unknown rdf element <rdf:favorite_food></issue>
+<issue level="Warning" row="31" col="36">unknown rdf element <rdf:favorite_film></issue>
+</extractorIssues>
+</issueReport>
+<validationReport>
+<issues>
+</issues>
+<ruleActivations>
+</ruleActivations>
+<errors>
+</errors>
+</validationReport>
+</report>
+<data>
+<![CDATA[
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix admin: <http://webns.net/mvcb/> .
+
+<http://any23.org/tmp/#favorite_film> a rdf:Property ;
+    rdfs:domain <http://any23.org/tmp/#Person> .
+
+<http://any23.org/tmp/#favorite_food> a rdf:Property ;
+    rdfs:domain <http://any23.org/tmp/#Person> .
+
+<http://any23.org/tmp/> a foaf:PersonalProfileDocument ;
+    foaf:maker <http://any23.org/tmp/#me> ;
+    foaf:primaryTopic <http://any23.org/tmp/#me> .
+
+<http://any23.org/tmp/#me> a foaf:Person ;
+    foaf:name "Inaciane Monteiro" ;
+    foaf:title "Mrs" ;
+    foaf:givenname "Inaciane" ;
+    foaf:family_name "Monteiro" ;
+    foaf:nick "ina" ;
+    foaf:homepage <https://plus.google.com/103485828107965619700> ;
+    foaf:depiction <https://lh5.googleusercontent.com/-c_OBlYe6WRk/UOZuw0J-qnI/AAAAAAAAAcg/sfHbact1qAEjJXcMuyQIHlR49iU4VE9dQCL0B/s320-no/0853a216-4a69-4606-8994-31114933bd7f> ;
+    foaf:phone <tel:5585996778442> ;
+    rdf:favorite_food "Sushi" ;
+    rdf:favorite_film "Mononoke" .
+]]>
+</data>
+</response>
