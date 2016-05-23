@@ -1,1 +1,145 @@
+<rdf:RDF
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:tourism="http://www.inafalcao.com/tourism#">
 
+	<!-- OWL Header Example - Tourism -->
+	<owl:Ontology rdf:about="http://www.inafalcao.com/tourism">
+		<dc:title>Tourism Ontology</dc:title>
+	</owl:Ontology>
+
+	<!-- OWL Object Definition - Tourism Attraction -->
+	<owl:Class rdf:about="http://www.inafalcao.com/tourism#tourismAttraction">
+		<rdf:type rdf:resource="http://www.inafalcao.com/tourism"/>
+		<rdfs:label>Tourism Attraction</rdfs:label>
+		<rdfs:comment>The class of all tourism attraction.</rdfs:comment>
+	</owl:Class>
+
+	<!-- OWL Object Definition - Tourism Attraction -->
+	<owl:Class rdf:about="http://www.inafalcao.com/tourismAttraction#museum">
+		<rdfs:subClassOf rdf:resource="http://www.inafalcao.com/tourism"/>
+		<rdfs:label>Tourism Attraction</rdfs:label>
+		<rdfs:comment>Tourism Attraction Instance.</rdfs:comment>
+	</owl:Class>
+
+	<!-- OWL Object Definition - Restaurant -->
+	<owl:Class rdf:about="http://www.inafalcao.com/tourism#restaurant">
+		<rdf:type rdf:resource="http://www.inafalcao.com/tourism"/>
+		<rdfs:label>Restaurant</rdfs:label>
+		<rdfs:comment>Restaurant instance.</rdfs:comment>
+	</owl:Class>
+
+	<!-- OWL Object Definition - Hotel -->
+	<owl:Class rdf:about="http://www.inafalcao.com/tourism#hotel">
+		<rdf:type rdf:resource="http://www.inafalcao.com/tourism"/>
+		<rdfs:label>Hotel</rdfs:label>
+		<rdfs:comment>Hotel instance.</rdfs:comment>
+	</owl:Class>
+
+	<!-- OWL Class Definition - Museum -->
+	<owl:Class rdf:about="http://www.inafalcao.com/tourismAttraction#museum">
+		<rdfs:subClassOf rdf:resource="http://www.inafalcao.com/tourism#tourismAttraction"/>
+		<rdfs:label>Museum</rdfs:label>
+		<rdfs:comment>The class of all museums.</rdfs:comment>
+	</owl:Class>
+
+	<!-- OWL Class Definition - Landmark -->
+	<owl:Class rdf:about="http://www.inafalcao.com/tourismAttraction#landmark">
+		<rdfs:subClassOf rdf:resource="http://www.inafalcao.com/tourism#tourismAttraction"/>
+		<rdfs:label>Landmark</rdfs:label>
+		<rdfs:comment>The class of all landmarks.</rdfs:comment>
+	</owl:Class>
+
+	<!-- OWL Class Definition - Outdoor Spot -->
+	<owl:Class rdf:about="http://www.inafalcao.com/tourismAttraction#outdoorSpot">
+		<rdfs:subClassOf rdf:resource="http://www.inafalcao.com/tourism#tourismAttraction"/>
+		<rdfs:label>Outdoor Spot</rdfs:label>
+		<rdfs:comment>The class of all outdoor spots.</rdfs:comment>
+	</owl:Class>
+
+	!-- OWL Class Definition - Amusement Park -->
+	<owl:Class rdf:about="http://www.inafalcao.com/tourismAttraction#amusementPark">
+		<rdfs:subClassOf rdf:resource="http://www.inafalcao.com/tourism#tourismAttraction"/>
+		<rdfs:label>Amusement Park</rdfs:label>
+		<rdfs:comment>The class of all amusement parks.</rdfs:comment>
+	</owl:Class>
+
+	<!-- OWL Subclass Definition - Art Museum -->
+	<owl:Class rdf:about="http://www.inafalcao.com/museum#artMuseum">
+		<rdfs:subClassOf rdf:resource="http://www.inafalcao.com/tourismAttraction#museum"/>
+		<rdfs:label>Art Museum</rdfs:label>
+		<rdfs:comment>The class of all art museums.</rdfs:comment>
+	</owl:Class>
+
+	<!-- OWL Subclass Definition - History Museum -->
+	<owl:Class rdf:about="http://www.inafalcao.com/museum#historyMuseum">
+		<rdfs:subClassOf rdf:resource="http://www.inafalcao.com/tourismAttraction#museum"/>
+		<rdfs:label>History Museum</rdfs:label>
+		<rdfs:comment>The class of all history museums.</rdfs:comment>
+	</owl:Class>
+
+	<!-- OWL Subclass Definition - Modern Art Museum -->
+	<owl:Class rdf:about="http://www.inafalcao.com/artMuseum#modernArtMuseum">
+		<rdfs:subClassOf rdf:resource="http://www.inafalcao.com/museum#artMuseum"/>
+		<rdfs:label>Modern Art Museum</rdfs:label>
+		<rdfs:comment>The class of all modern art museums.</rdfs:comment>
+	</owl:Class>
+
+	<!-- Rating -->
+	<owl:ObjectProperty rdf:ID="http://www.inafalcao.com/Rating">
+	</owl:ObjectProperty>
+
+	<!-- Trip Advisor Rating -->
+	<owl:ObjectProperty rdf:ID="http://www.inafalcao.com/hasRating#tripAdvisorRating">
+	  <rdfs:subPropertyOf rdf:resource="http://www.inafalcao.com/hasRating" />
+	  <rdfs:domain rdf:resource="http://www.inafalcao.com/tourism" />
+	</owl:ObjectProperty>
+
+	<!-- Has Rating -->
+	<owl:ObjectProperty rdf:ID="http://www.inafalcao.com/hasRating#hasStar">
+	  <rdfs:subPropertyOf rdf:resource="http://www.inafalcao.com/hasRating" />
+	  <rdfs:domain rdf:resource="http://www.inafalcao.com/tourism#hotel" />
+	</owl:ObjectProperty>
+
+	<!-- Curator -->
+	<owl:ObjectProperty rdf:ID="http://www.inafalcao.com/curator">
+	  <rdfs:domain rdf:resource="http://www.inafalcao.com/tourismAttraction#museum" />
+	  <rdfs:range rdf:resource="#people" />
+	</owl:ObjectProperty>
+
+	<!-- Ticket Price -->
+	<owl:ObjectProperty rdf:ID="http://www.inafalcao.com/ticketPrice">
+	  <rdfs:domain rdf:resource="http://www.inafalcao.com/tourism#tourismAttraction" />
+	</owl:ObjectProperty>
+
+	<!-- OWL Class Definition - Skilled Worker -->
+	<owl:Class rdf:ID="http://www.inafalcao.com/skilledWorker">
+		<rdfs:label>Skilled Worker</rdfs:label>
+	</owl:Class>
+
+	<!-- OWL Object Definition - Chef -->
+	<owl:Class rdf:about="http://www.inafalcao.com/skilledWorker#chef">
+		<rdfs:subClassOf rdf:resource="http://www.inafalcao.com/skilledWorker"/>
+		<rdfs:label>Chef</rdfs:label>
+		<rdfs:comment>Chef class.</rdfs:comment>
+	</owl:Class>
+
+	<!-- Signature Dishes -->
+	<owl:ObjectProperty rdf:ID="http://www.inafalcao.com/signatureDishes">
+	  <rdfs:domain rdf:resource="http://www.inafalcao.com/tourism#restaurant" />
+	</owl:ObjectProperty>
+
+	<!-- Michelin Starred -->
+	<owl:ObjectProperty rdf:ID="http://www.inafalcao.com/michelinStarredRestaurant">
+	  <rdfs:domain rdf:resource="http://www.inafalcao.com/tourism#restaurant" />
+	</owl:ObjectProperty>
+
+	<!-- Number of Rooms -->
+	<owl:ObjectProperty rdf:ID="http://www.inafalcao.com/numberOfRooms">
+	  <rdfs:domain rdf:resource="http://www.inafalcao.com/tourism#hotel" />
+	</owl:ObjectProperty>
+
+
+</rdf:RDF>
