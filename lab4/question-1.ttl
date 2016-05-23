@@ -1,1 +1,106 @@
-teste
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dc11: <http://purl.org/dc/elements/1.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://www.inafalcao.com/tourism>
+  a owl:Ontology ;
+  dc11:title "Tourism Ontology" .
+
+<http://www.inafalcao.com/tourism#tourismAttraction>
+  a owl:Class, <http://www.inafalcao.com/tourism> ;
+  rdfs:label "Tourism Attraction" ;
+  rdfs:comment "The class of all tourism attraction." .
+
+<http://www.inafalcao.com/tourismAttraction#museum>
+  a owl:Class ;
+  rdfs:subClassOf <http://www.inafalcao.com/tourism>, <http://www.inafalcao.com/tourism#tourismAttraction> ;
+  rdfs:label "Tourism Attraction", "Museum" ;
+  rdfs:comment "Tourism Attraction Instance.", "The class of all museums." .
+
+<http://www.inafalcao.com/tourism#restaurant>
+  a owl:Class, <http://www.inafalcao.com/tourism> ;
+  rdfs:label "Restaurant" ;
+  rdfs:comment "Restaurant instance." .
+
+<http://www.inafalcao.com/tourism#hotel>
+  a owl:Class, <http://www.inafalcao.com/tourism> ;
+  rdfs:label "Hotel" ;
+  rdfs:comment "Hotel instance." .
+
+<http://www.inafalcao.com/tourismAttraction#landmark>
+  a owl:Class ;
+  rdfs:subClassOf <http://www.inafalcao.com/tourism#tourismAttraction> ;
+  rdfs:label "Landmark" ;
+  rdfs:comment "The class of all landmarks." .
+
+<http://www.inafalcao.com/tourismAttraction#outdoorSpot>
+  a owl:Class ;
+  rdfs:subClassOf <http://www.inafalcao.com/tourism#tourismAttraction> ;
+  rdfs:label "Outdoor Spot" ;
+  rdfs:comment "The class of all outdoor spots." .
+
+<http://www.inafalcao.com/tourismAttraction#amusementPark>
+  a owl:Class ;
+  rdfs:subClassOf <http://www.inafalcao.com/tourism#tourismAttraction> ;
+  rdfs:label "Amusement Park" ;
+  rdfs:comment "The class of all amusement parks." .
+
+<http://www.inafalcao.com/museum#artMuseum>
+  a owl:Class ;
+  rdfs:subClassOf <http://www.inafalcao.com/tourismAttraction#museum> ;
+  rdfs:label "Art Museum" ;
+  rdfs:comment "The class of all art museums." .
+
+<http://www.inafalcao.com/museum#historyMuseum>
+  a owl:Class ;
+  rdfs:subClassOf <http://www.inafalcao.com/tourismAttraction#museum> ;
+  rdfs:label "History Museum" ;
+  rdfs:comment "The class of all history museums." .
+
+<http://www.inafalcao.com/artMuseum#modernArtMuseum>
+  a owl:Class ;
+  rdfs:subClassOf <http://www.inafalcao.com/museum#artMuseum> ;
+  rdfs:label "Modern Art Museum" ;
+  rdfs:comment "The class of all modern art museums." .
+
+<http://njh.me/#http://www.inafalcao.com/Rating> a owl:ObjectProperty .
+<http://njh.me/#http://www.inafalcao.com/hasRating#tripAdvisorRating>
+  a owl:ObjectProperty ;
+  rdfs:subPropertyOf <http://www.inafalcao.com/hasRating> ;
+  rdfs:domain <http://www.inafalcao.com/tourism> .
+
+<http://njh.me/#http://www.inafalcao.com/hasRating#hasStar>
+  a owl:ObjectProperty ;
+  rdfs:subPropertyOf <http://www.inafalcao.com/hasRating> ;
+  rdfs:domain <http://www.inafalcao.com/tourism#hotel> .
+
+<http://njh.me/#http://www.inafalcao.com/curator>
+  a owl:ObjectProperty ;
+  rdfs:domain <http://www.inafalcao.com/tourismAttraction#museum> ;
+  rdfs:range <http://njh.me/#people> .
+
+<http://njh.me/#http://www.inafalcao.com/ticketPrice>
+  a owl:ObjectProperty ;
+  rdfs:domain <http://www.inafalcao.com/tourism#tourismAttraction> .
+
+<http://njh.me/#http://www.inafalcao.com/skilledWorker>
+  a owl:Class ;
+  rdfs:label "Skilled Worker" .
+
+<http://www.inafalcao.com/skilledWorker#chef>
+  a owl:Class ;
+  rdfs:subClassOf <http://www.inafalcao.com/skilledWorker> ;
+  rdfs:label "Chef" ;
+  rdfs:comment "Chef class." .
+
+<http://njh.me/#http://www.inafalcao.com/signatureDishes>
+  a owl:ObjectProperty ;
+  rdfs:domain <http://www.inafalcao.com/tourism#restaurant> .
+
+<http://njh.me/#http://www.inafalcao.com/michelinStarredRestaurant>
+  a owl:ObjectProperty ;
+  rdfs:domain <http://www.inafalcao.com/tourism#restaurant> .
+
+<http://njh.me/#http://www.inafalcao.com/numberOfRooms>
+  a owl:ObjectProperty ;
+  rdfs:domain <http://www.inafalcao.com/tourism#hotel> .
