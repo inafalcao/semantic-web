@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="app" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="app" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="app" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="app" class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Music Mashup</title>
+
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="/materialize/css/materialize.min.css">
+    <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/app.css">
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+</head>
+<body ng-controller="mainController">
+
+    <nav class="cyan darken-1" role="navigation">
+        <div class="nav-wrapper container">
+
+            <ul class="left hide-on-med-and-down brand-logo">
+                <li><a href="sass.html"><i class="material-icons left">insert_chart</i>Music Mashup</a></li>
+            </ul>
+
+            <ul class="right hide-on-med-and-down">
+                <li><a ng-click="showModal()" href="#">Sobre</a></li>
+            </ul>
+
+            <ul id="nav-mobile" class="side-nav">
+                <li  ><a href="#">Sobre</a></li>
+            </ul>
+            <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+        </div>
+    </nav>
+
+
+    <div id="map_canvas">
+        <ui-gmap-google-map center='map.center' zoom='map.zoom'>
+            <!--<ui-gmap-markers models="map.markers" coords="'self'" icon="'icon'">-->
+             <ui-gmap-marker ng-repeat="m in map.markers" coords="m.coords" icon="m.icon" idkey="m.id"></ui-gmap-marker>
+        </ui-gmap-google-map>
+    </div>
+
+    <div class="filters">
+
+        <div class="content-filters">
+            <p class="brand-text">Quando?</p>
+            <ul class="header filter-itens">
+                <li><a class="waves-effect waves-light btn">Hoje</a></li>
+                <li><a class="waves-effect waves-light btn">Esta Semana</a></li>
+                <li><a class="waves-effect waves-light btn">Este mês</a></li>
+            </ul>
+            <!-- <p class="brand-text">Menu Options:</p>
+            <div class="menu-select" title="The menu will display in all devices">
+                <input type="radio" id="menu1" name="intelligent-menu">
+                <label for="menu1">Fixed</label>
+            </div> -->
+
+
+        </div>
+
+    </div>
+
+    <div class="clearfix meta mask" id="mask">
+
+        <section id="about" class="scroll-section root-sec padd-tb-60 grey lighten-5 about-wrap">
+            <div class="container">
+                <div class="row">
+                    <div class="clearfix about-inner">
+
+                        <div class="col s12 m4">
+                            <div class="person-about">
+                                <h3 class="about-subtitle">QUARTO NEGRO</h3>
+                                <p>Duo Quarto Negro faz show de lançamento de seu EP “Obsessivo”, no Centro Cultural
+                                    São Paulo. A dupla formada por Eduardo Praça e Thiago Klein tem no currículo também
+                                    os álbuns “Desconocidos”, gravado em Barcelona, e “Amor Violento”, lançado no ano
+                                    passado.</p>
+                                <!-- <a class="waves-effect waves-light btn-large brand-bg white-text"><i class="mdi-content-archive left"></i> Download Resume</a> -->
+                            </div>
+                        </div>
+                        <!-- about me description -->
+
+                        <div class="col s6 m4">
+                            <div class="person-img wow fadeIn animated" style="visibility: visible; animation-name: fadeIn;">
+                                <img class="z-depth-1" src="/images/event.jpg" alt="">
+                            </div>
+                        </div>
+                        <!-- about me image -->
+
+                        <div class="col s6 m4">
+                            <div class="person-info">
+                                <h3 class="about-subtitle">Dados do evento</h3>
+                                <h5><span>Cidade :</span> São Paulo, SP</h5>
+                                <h5><span>Data :</span> sábado, 16/07/2016, às 19h00</h5>
+                                <h5><span>Local :</span> Centro Cultural São Paulo - Rua Vergueiro, 1000 - Paraíso</h5>
+                                <h5><span>Ingresso :</span> Ingresso Rápido R$ 24</h5>
+                                <h5><span>Classificação :</span> Livre</h5>
+                            </div>
+
+                        </div>
+                        <!-- about me info -->
+
+                    </div>
+                </div>
+            </div>
+            <!-- .container end -->
+        </section>
+
+
+
+        <section id="resume" class="scroll-section ">
+            <section id="skill about" class="root-sec white skill-wrap padd-tb-60">
+                <div class="sec-overlay">
+                    <div class="container">
+                        <div class="row">
+                            <div class="clearfix about-inner">
+
+                                <div class="col s4 m4">
+                                    <div class="person-about">
+                                        <h3 class="about-subtitle">Abstract</h3>
+                                        <p>Duo Quarto Negro faz show de lançamento de seu EP “Obsessivo”, no Centro Cultural
+                                            São Paulo. A dupla formada por Eduardo Praça e Thiago Klein tem no currículo também
+                                            os álbuns “Desconocidos”, gravado em Barcelona, e “Amor Violento”, lançado no ano
+                                            passado.</p>
+                                        <!-- <a class="waves-effect waves-light btn-large brand-bg white-text"><i class="mdi-content-archive left"></i> Download Resume</a> -->
+                                    </div>
+                                </div>
+                                <!-- about me description -->
+
+
+                                <div class="col s4 m4 funfact-box">
+                                    <div class="center-align card-panel white">
+                                        <div class="feature-box-outer">
+                                            <div class="funfact-box-inner">
+                                                <div class="clearfix ">
+                                                    <i class="mdi-action-wallet-travel"></i>
+                                                    <span class="num countNumb">229</span>
+                                                </div>
+                                                <div class="context">Ranking</div>
+                                            </div>
+                                            <ul class="collection with-header">
+                                                <li class="collection-item"><div>Acessos<a href="#!" class="secondary-content">123743</a></div></li>
+                                                <li class="collection-item"><div>Extração<a href="#!" class="secondary-content">11/10/2016</a></div></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <!-- about me image -->
+
+                                <div class="col s4 m4">
+                                    <div class="person-info">
+                                        <h3 class="about-subtitle">Dados do Artista</h3>
+                                        <h5><span>Cidade :</span> São Paulo, SP</h5>
+                                        <h5><span>Gênero :</span> MPB</h5>
+                                        <h5><span>Home Page :</span> www.quartonegro.com</h5>
+                                    </div>
+
+                                </div>
+                                <!-- about me info -->
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- .container end -->
+            </section>
+
+
+
+
+
+
+
+
+
+        <div class="mask-hide" ng-click="closeModal()">
+            <a class="btn-flat"><i class="fa fa-times" aria-hidden="true"></i></a>
+        </div>
+    </div>
+
+    <!-- <footer class="page-footer pink lighten-1">
+        <div class="footer-copyright">
+            <div class="container">
+                Made by Gustavo Brilhante, Inaciane Monteiro, Caio Viktor, Narciso Arruda
+            </div>
+        </div>
+    </footer> -->
+
+
+    <script src="/webjars/angularjs/1.4.9/angular.js"></script>
+    <script src="/webjars/angularjs/1.4.9/angular-resource.js"></script>
+    <script src="/webjars/angularjs/1.4.9/angular-route.js"></script>
+    <script src="https://cdn.jsdelivr.net/lodash/3.8.0/lodash.min.js"></script>
+    <script src="/js/vendor/angular-simple-logger.js"></script>
+    <script src='//maps.googleapis.com/maps/api/js?sensor=false'></script>
+    <script src="/js/vendor/angular-maps.js"></script>
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="/materialize/js/materialize.min.js"></script>
+
+    <script src="/js/app.js"></script>
+    <script src="/js/controller.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function(event) {
+          var w = window.innerWidth;
+          var h = window.innerHeight;
+          var test = document.getElementsByClassName('.angular-google-map-container');
+          console.log(test);
+        });
+    </script>
+
+</body>
+</html>
