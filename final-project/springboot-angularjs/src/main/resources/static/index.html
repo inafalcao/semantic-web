@@ -41,7 +41,7 @@
     <div id="map_canvas">
         <ui-gmap-google-map center='map.center' zoom='map.zoom'>
             <!--<ui-gmap-markers models="map.markers" coords="'self'" icon="'icon'">-->
-             <ui-gmap-marker ng-repeat="m in map.markers" coords="m.coords" icon="m.icon" idkey="m.id"></ui-gmap-marker>
+             <ui-gmap-marker ng-repeat="m in map.markers" coords="m.coords" icon="m.icon" idkey="m.id" click="onMarkerClick"></ui-gmap-marker>
         </ui-gmap-google-map>
     </div>
 
@@ -50,9 +50,9 @@
         <div class="content-filters">
             <p class="brand-text">Quando?</p>
             <ul class="header filter-itens">
-                <li><a class="waves-effect waves-light btn">Hoje</a></li>
-                <li><a class="waves-effect waves-light btn">Esta Semana</a></li>
-                <li><a class="waves-effect waves-light btn">Este mês</a></li>
+                <li><a ng-click="filterHoje()" class="waves-effect waves-light btn">Hoje</a></li>
+                <li><a ng-click="filterSemana()" class="waves-effect waves-light btn">Esta Semana</a></li>
+                <li><a ng-click="filterMes()" class="waves-effect waves-light btn">Este mês</a></li>
             </ul>
             <!-- <p class="brand-text">Menu Options:</p>
             <div class="menu-select" title="The menu will display in all devices">
@@ -74,19 +74,16 @@
 
                         <div class="col s12 m4">
                             <div class="person-about">
-                                <h3 class="about-subtitle">QUARTO NEGRO</h3>
-                                <p>Duo Quarto Negro faz show de lançamento de seu EP “Obsessivo”, no Centro Cultural
-                                    São Paulo. A dupla formada por Eduardo Praça e Thiago Klein tem no currículo também
-                                    os álbuns “Desconocidos”, gravado em Barcelona, e “Amor Violento”, lançado no ano
-                                    passado.</p>
+                                <h3 class="about-subtitle">{{choosenEvent.nome}}</h3>
+                                <p>{{choosenEvent.descricao}}</p>
                                 <!-- <a class="waves-effect waves-light btn-large brand-bg white-text"><i class="mdi-content-archive left"></i> Download Resume</a> -->
                             </div>
                         </div>
                         <!-- about me description -->
 
-                        <div class="col s6 m4">
+                        <div class="col s6 m4" style="text-align: center;">
                             <div class="person-img wow fadeIn animated" style="visibility: visible; animation-name: fadeIn;">
-                                <img class="z-depth-1" src="/images/event.jpg" alt="">
+                                <img class="z-depth-1" src="/images/music.ico" alt="" >
                             </div>
                         </div>
                         <!-- about me image -->
@@ -94,11 +91,9 @@
                         <div class="col s6 m4">
                             <div class="person-info">
                                 <h3 class="about-subtitle">Dados do evento</h3>
-                                <h5><span>Cidade :</span> São Paulo, SP</h5>
-                                <h5><span>Data :</span> sábado, 16/07/2016, às 19h00</h5>
-                                <h5><span>Local :</span> Centro Cultural São Paulo - Rua Vergueiro, 1000 - Paraíso</h5>
-                                <h5><span>Ingresso :</span> Ingresso Rápido R$ 24</h5>
-                                <h5><span>Classificação :</span> Livre</h5>
+                                <h5><span>Data :</span> {{choosenEvent.data}}</h5>
+                                <h5><span>Local :</span> {{choosenEvent.local}}</h5>
+                                <h5><span>Ingresso :</span> {{choosenEvent.ingresso}}</h5>
                             </div>
 
                         </div>
@@ -122,10 +117,7 @@
                                 <div class="col s4 m4">
                                     <div class="person-about">
                                         <h3 class="about-subtitle">Abstract</h3>
-                                        <p>Duo Quarto Negro faz show de lançamento de seu EP “Obsessivo”, no Centro Cultural
-                                            São Paulo. A dupla formada por Eduardo Praça e Thiago Klein tem no currículo também
-                                            os álbuns “Desconocidos”, gravado em Barcelona, e “Amor Violento”, lançado no ano
-                                            passado.</p>
+                                        <p>{{choosenEvent.musicArtist.descricao}}</p>
                                         <!-- <a class="waves-effect waves-light btn-large brand-bg white-text"><i class="mdi-content-archive left"></i> Download Resume</a> -->
                                     </div>
                                 </div>
@@ -138,13 +130,13 @@
                                             <div class="funfact-box-inner">
                                                 <div class="clearfix ">
                                                     <i class="mdi-action-wallet-travel"></i>
-                                                    <span class="num countNumb">229</span>
+                                                    <span class="num countNumb">{{choosenEvent.musicArtist.rank.rank}}</span>
                                                 </div>
                                                 <div class="context">Ranking</div>
                                             </div>
                                             <ul class="collection with-header">
-                                                <li class="collection-item"><div>Acessos<a href="#!" class="secondary-content">123743</a></div></li>
-                                                <li class="collection-item"><div>Extração<a href="#!" class="secondary-content">11/10/2016</a></div></li>
+                                                <li class="collection-item"><div>Acessos<a href="#!" class="secondary-content"> {{choosenEvent.musicArtist.rank.numAcessos}} </a></div></li>
+                                                <li class="collection-item"><div>Visitantes<a href="#!" class="secondary-content">{{choosenEvent.musicArtist.rank.visitantes}}</a></div></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -156,9 +148,8 @@
                                 <div class="col s4 m4">
                                     <div class="person-info">
                                         <h3 class="about-subtitle">Dados do Artista</h3>
-                                        <h5><span>Cidade :</span> São Paulo, SP</h5>
-                                        <h5><span>Gênero :</span> MPB</h5>
-                                        <h5><span>Home Page :</span> www.quartonegro.com</h5>
+                                        <h5><span>Gênero :</span> {{choosenEvent.musicArtist.genre}}</h5>
+                                        <h5><span>Home Page :</span> {{choosenEvent.musicArtist.homePage}}</h5>
                                     </div>
 
                                 </div>

@@ -1,2 +1,5 @@
 com/javacodegeeks/examples/WebAppInitializer.class
 com/javacodegeeks/examples/controller/MainController.class
+com/javacodegeeks/examples/model/ElementoEvento.class
+com/javacodegeeks/examples/model/MashupMusicEvents.class
+com/javacodegeeks/examples/model/ElementoLista.class
