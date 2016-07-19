@@ -23,39 +23,7 @@ public class MainController {
         return "index";
     }*/
 
-    @RequestMapping(value="/test", method = RequestMethod.GET)
-    public MashupMusicEvents getTest() throws ParseException {
-
-        // TODO code application logic here
-        MashupMusicEvents objMashup = new MashupMusicEvents();
-
-        Set<ElementoLista> lista1 = new HashSet<ElementoLista>();
-        lista1=objMashup.getListMusicArtist();
-        for (Iterator<ElementoLista> iterator = lista1.iterator(); iterator.hasNext();) {
-            ElementoLista next = iterator.next();
-            System.out.println(next.descricao +""+next.uri);
-
-        }
-
-        Set<ElementoLista> lista3= new HashSet<ElementoLista>();
-        lista3=objMashup.getListGenre();
-        for (Iterator<ElementoLista> iterator = lista3.iterator(); iterator.hasNext();) {
-            ElementoLista next = iterator.next();
-            System.out.println(next.descricao +""+next.uri);
-
-        }
-
-
-       /* Set<ElementoEvento> lista2= new HashSet<ElementoEvento>();
-        lista2 = objMashup.getListMusicEvents();
-        for (Iterator<ElementoEvento> iterator = lista2.iterator(); iterator.hasNext();) {
-            ElementoEvento next = iterator.next();
-            System.out.println(next.musicartist.descricao +""+next.musicartist.uri);
-
-        }*/
-        return objMashup;
-    }
-
+    
     @RequestMapping(value="/events/range/{dateStart}/{dateEnd}/lat/{lat}/long/{lng}", method = RequestMethod.GET)
     public List<Evento> getEvents(@PathVariable("dateStart") String dateStart,
                                   @PathVariable("dateEnd") String dateEnd,
